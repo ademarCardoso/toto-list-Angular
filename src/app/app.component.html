@@ -8,20 +8,27 @@
 
 <h2 style="text-align:center">Adicione um item a lista:</h2>
 
-<input type="text" #newTodo ngModel="text">
-<button (click)="addTodo(newTodo.value); newTodo.value=''">Adicionar!</button>
+<div class="container">
+
+<input type="text" #newTodo>
+<button (click)="addTodo(newTodo.value); newTodo.value=''" class="btn-add">Adicionar!</button>
+
+<br />
 
 <table>
 
   <tr>
+    <td> Id. </td>
     <td> Nome </td>
-    <!-- <td> Telefone </td> -->
   </tr>
 
   <tr *ngFor="let todo of todos">
+    <td>{{todo.id}}</td>
     <td>{{todo.name}}</td>
-    <!-- <td>{{todo.phone}}</td> -->
-    <button (click)="deleteTodo(todo)">Deletar</button>
-    <button (click)="updateTodo(todo)">Atualizar</button>
+
+    <button (click)="deleteTodo(todo)" class="btn-remove">Deletar</button>
+    <button (click)="updateTodo(todo)" class="btn-update">Atualizar</button>
   </tr>
 </table>
+
+</div>

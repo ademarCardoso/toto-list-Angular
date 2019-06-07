@@ -1,0 +1,51 @@
+input {
+  height: 25px;
+  width: 300px;
+}
+
+.btn-add {
+  width: 200px;
+}
+
+.btn-add:hover {
+  background-color: rgb(8, 212, 8);
+}
+
+.btn-update:hover {
+  background-color: rgb(8, 212, 8);
+}
+
+.btn-remove {
+  background-color: brown;
+}
+
+.btn-remove:hover {
+  background-color: red;
+}
+
+button {
+  padding: 5px;
+  height: 35px;
+  width: 100px;
+  background-color: forestgreen;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  margin: 2px;
+  font-weight: 500;
+  font-size: 14pt;
+}
+
+.container {
+  margin: 0 auto;
+  display: table;
+  align-items: center;
+}
+
+td {
+  text-align: center;
+  border: 1px solid black;
+  width: 150px;
+  background-color: whitesmoke;
+}

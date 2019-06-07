@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   todos = [
     {
-    name: 'Ademar'
+      name: 'Ademar'
     },
     {
       name: 'Ana clara'
@@ -24,17 +25,25 @@ export class AppComponent {
     } else {
 
       let newTodo = {
-        name: newTodoValue,
-        phone: ''
+        name: newTodoValue
       }
 
       this.todos.push(newTodo)
     }
   }
+
   deleteTodo (todo) {
     console.log(todo)
     this.todos = this.todos.filter( t => t.name !== todo.name )
   }
-  updateTodo(todo) { }
+
+  updateTodo(todo) {
+    let input = document.querySelector('input')
+    input.value = todo.name
+
+    // this.todos
+
+
+  }
 
 }
