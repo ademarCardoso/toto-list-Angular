@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,32 +10,22 @@ export class AppComponent {
   }
 
   id = 0
+  upTodo = { id: 0, name: ''}
 
   todos = [
     {
-      id: this.id += 1,
-      name: 'Ademar'
-    },
-    {
-      id: this.id += 1,
-      name: 'Ana clara'
-    },
-    {
-      id: this.id += 1,
-      name: 'Nadir'
+      id: this.id,
+      name: 'Aprender Angular'
     }
-]
+  ]
 
   addTodo (newTodoValue) {
-    if (this.todos === []) {
-      id: this.id = 0
-    }
     if (newTodoValue === '') {
       alert('O campo de input esta vazio')
     } else {
 
       let newTodo = {
-        id: this.id += 1,
+        id: this.todos.length,
         name: newTodoValue
       }
 
@@ -49,10 +39,17 @@ export class AppComponent {
     this.id--
   }
 
-  updateTodo(todo) {
-    let input = document.querySelector('input')
-    input.value = todo.name
+  updateTodo(id, name) {
+    let setNewTodo = prompt(`Atualiza o: ${name}`)
 
+    if (setNewTodo === '') {
+      return
+    }
+
+    this.upTodo.id = id
+    this.upTodo.name = name
+
+    this.todos[id].name = setNewTodo
   }
 
 }

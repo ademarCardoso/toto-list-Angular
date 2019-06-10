@@ -27,7 +27,7 @@
     <td>{{todo.name}}</td>
 
     <button (click)="deleteTodo(todo)" class="btn-remove">Deletar</button>
-    <button (click)="updateTodo(todo)" class="btn-update">Atualizar</button>
+    <button (click)="updateTodo(todo.id, todo.name)" class="btn-update">Atualizar</button>
   </tr>
 </table>
 
