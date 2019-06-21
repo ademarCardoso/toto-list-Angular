@@ -1,34 +1,37 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Bem vindo !
+    Bem vindo ao seu Angular Todo-List !
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <img width="300" alt="Angular Logo"
+    src="https://user-images.githubusercontent.com/1560278/27637937-cb4b9b24-5c11-11e7-949b-15c1e4cdb53c.gif" />
 </div>
 
-<h2 style="text-align:center">Adicione um item a lista:</h2>
+<div>
 
-<div class="container">
+  <h2 style="text-align:center">Adicione um item a lista: </h2>
 
-<input type="text" #newTodo>
-<button (click)="addTodo(newTodo.value); newTodo.value=''" class="btn-add">Adicionar!</button>
+  <div class="container">
 
-<br />
+    <input class="input" autofocus type="text" #newTodo (keyup.enter)="addTodo(newTodo.value); newTodo.value=''"
+      placeholder="Pressione enter para adicionar..." />
 
-<table>
+</div>
 
-  <tr>
-    <td> Id. </td>
-    <td> Nome </td>
-  </tr>
+  <table>
 
-  <tr *ngFor="let todo of todos">
-    <td>{{todo.id}}</td>
-    <td>{{todo.name}}</td>
+    <tr>
+      <td> ID </td>
+      <td> Nome </td>
+    </tr>
 
-    <button (click)="deleteTodo(todo)" class="btn-remove">Deletar</button>
-    <button (click)="updateTodo(todo.id, todo.name)" class="btn-update">Atualizar</button>
-  </tr>
-</table>
+    <tr *ngFor="let todo of todos">
+      <td>{{ todo.id }}</td>
+      <td>{{ todo.name }}</td>
+
+      <button (click)="deleteTodo(todo)" class="btn-remove"> X </button>
+      <button (click)="updateTodo(todo.id, todo.name)" class="btn-update">Atualizar</button>
+    </tr>
+  </table>
 
 </div>

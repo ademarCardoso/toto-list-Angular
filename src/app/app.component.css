@@ -1,6 +1,19 @@
-input {
+@media (max-width: 800px) {
+  .input {
+    /* background-color: black; */
+    width: 100%;
+    margin-top: none;
+    margin: 10px;
+  }
+  .btn-add {
+    width: 75px;
+  }
+}
+
+.input {
   height: 25px;
-  width: 300px;
+  width: 100%;
+  text-align: center;
 }
 
 .btn-add {
@@ -17,6 +30,7 @@ input {
 
 .btn-remove {
   background-color: brown;
+  width: 30px;
 }
 
 .btn-remove:hover {
@@ -45,7 +59,8 @@ button {
 
 td {
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid rgb(65, 64, 64);
+  border-radius: 5px;
   width: 150px;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
 }

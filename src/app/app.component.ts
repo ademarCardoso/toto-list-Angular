@@ -9,12 +9,9 @@ export class AppComponent {
   constructor () {
   }
 
-  id = 0
-  upTodo = { id: 0, name: ''}
-
   todos = [
     {
-      id: this.id,
+      id: 0,
       name: 'Aprender Angular'
     }
   ]
@@ -36,19 +33,14 @@ export class AppComponent {
   deleteTodo (todo) {
     console.log(todo)
     this.todos = this.todos.filter( t => t.name !== todo.name )
-    this.id--
   }
 
   updateTodo(id, name) {
-    let setNewTodo = prompt(`Atualiza o: ${name}`)
+    let setNewTodo = prompt(`Atualiza o: ${ name }`)
 
-    if (setNewTodo === '') {
+    if (setNewTodo === '' || setNewTodo === name) {
       return
     }
-
-    this.upTodo.id = id
-    this.upTodo.name = name
-
     this.todos[id].name = setNewTodo
   }
 
