@@ -1,15 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Bem vindo ao seu Angular Todo-List !
-  </h1>
   <img width="300" alt="Angular Logo"
     src="https://user-images.githubusercontent.com/1560278/27637937-cb4b9b24-5c11-11e7-949b-15c1e4cdb53c.gif" />
 </div>
 
-<div>
+<div class="input-enter">
 
-  <h2 style="text-align:center">Adicione um item a lista: </h2>
+  <h2 style="text-align:center">Adicione um item na lista: </h2>
 
   <div class="container">
 
@@ -17,20 +14,20 @@
       placeholder="Pressione enter para adicionar..." />
 
 </div>
+  <br />
+  <table *ngIf="todos.length > 0">
 
-  <table>
-
-    <tr>
+    <!-- <tr>
       <td> ID </td>
       <td> Nome </td>
-    </tr>
+    </tr> -->
 
     <tr *ngFor="let todo of todos">
       <td>{{ todo.id }}</td>
       <td>{{ todo.name }}</td>
 
-      <button (click)="deleteTodo(todo)" class="btn-remove"> X </button>
-      <button (click)="updateTodo(todo.id, todo.name)" class="btn-update">Atualizar</button>
+      <button (click)="deleteTodo(todo)" class="btn-remove"> <i class="fas fa-trash-alt"></i> </button>
+      <button (click)="updateTodo(todo.id, todo.name)" class="btn-update"><i class="fas fa-pen"></i></button>
     </tr>
   </table>
 

@@ -1,13 +1,6 @@
-@media (max-width: 800px) {
-  .input {
-    /* background-color: black; */
-    width: 100%;
-    margin-top: none;
-    margin: 10px;
-  }
-  .btn-add {
-    width: 75px;
-  }
+.input-enter {
+  width: 65%;
+  margin: 0 auto;
 }
 
 .input {
@@ -16,21 +9,12 @@
   text-align: center;
 }
 
-.btn-add {
-  width: 200px;
-}
-
-.btn-add:hover {
-  background-color: rgb(8, 212, 8);
-}
-
 .btn-update:hover {
   background-color: rgb(8, 212, 8);
 }
 
 .btn-remove {
   background-color: brown;
-  width: 30px;
 }
 
 .btn-remove:hover {
@@ -40,7 +24,7 @@
 button {
   padding: 5px;
   height: 35px;
-  width: 100px;
+  width: 65px;
   background-color: forestgreen;
   color: white;
   text-align: center;
@@ -53,14 +37,24 @@ button {
 
 .container {
   margin: 0 auto;
-  display: table;
+  /* display: table; */
   align-items: center;
 }
 
+td:first-child {
+  display: none;
+}
+
 td {
+  background-color: rgb(83, 165, 241);
   text-align: center;
-  border: 1px solid rgb(65, 64, 64);
+  color: white;
+  font-size: 15pt;
   border-radius: 5px;
-  width: 150px;
-  /* background-color: whitesmoke; */
+  width: 200px;
+  font-weight: 500;
+}
+
+table {
+  margin: 0 auto;
 }
